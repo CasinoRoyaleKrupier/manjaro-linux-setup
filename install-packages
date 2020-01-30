@@ -1,0 +1,23 @@
+#!/bin/bash
+
+sudo pacman -Syu
+sudo pacman -S clang gcc cmake make plank manjaro-printer virtualbox thunderbird rhythmbox snapd putty
+
+sudo systemctl enable --now snapd.socket
+sudo snap install netcalc --edge
+sudo snap install spotify code-insiders vlc
+
+git config --global user.email radek3301@linux.pl
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+nano .zshrc
+source .zshrc
+
+mkdir $HOME/.themes
+cp Toffee-dark-compact $HOME/.themes/
+
+mkdir $HOME/.icons
+cp Flat-Remix-Blue-Light $HOME/.icons/
+cp Flat-Remix-Blue-Dark $HOME/.icons/
+
+cp plank.desktop $HOME/.config/autostart/
