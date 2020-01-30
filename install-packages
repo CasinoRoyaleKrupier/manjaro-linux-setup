@@ -14,10 +14,11 @@ nano .zshrc
 source .zshrc
 
 mkdir $HOME/.themes
-cp Toffee-dark-compact $HOME/.themes/
+cp -r Toffee-dark-compact $HOME/.themes/
 
 mkdir $HOME/.icons
-cp Flat-Remix-Blue-Light $HOME/.icons/
-cp Flat-Remix-Blue-Dark $HOME/.icons/
+cp -r Flat-Remix-Blue-Light $HOME/.icons/
+cp -r Flat-Remix-Blue-Dark $HOME/.icons/
 
 cp plank.desktop $HOME/.config/autostart/
+cp -r plank $HOME/
